@@ -1,9 +1,12 @@
 galaxy_info:
   author: Ilias Daradimos
   description: Install Flightradar24 feeder
-  company:
-  platforms: all
+  platforms:
+  - name: GenericLinux
+    versions:
+      - all
   license: GPL-3.0-only
   min_ansible_version: 2.1
-  galaxy_tags: fr24
+  galaxy_tags: 
+    - fr24
 dependencies: []
