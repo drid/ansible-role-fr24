@@ -1,7 +1,8 @@
-Role Name
+FR24
 =========
 
-Install Flightradar24 feeder
+Install Flightradar24 feeder  
+Original repo for contributions at https://gitlab.com/drid/ansible-role-fr24.git, 
 
 Role Variables
 --------------
@@ -30,4 +31,4 @@ Example Playbook
 License
 -------
 
-GPL-3.0-only
+GPL-3.0
