@@ -1,0 +1,37 @@
+---
+- name: add apt keys
+  apt_key: keyserver=pgp.mit.edu id=C969F07840C430F5
+  become: yes
+  tags:
+    - fr24
+    - apt
+
+- name: Copy fr24 apt source
+  copy: src=fr24.list dest=/etc/apt/sources.list.d/fr24.list
+  become: yes
+  tags:
+    - fr24
+    - apt
+
+- name: Create Flightradar24 config
+  template: src=fr24feed.ini.j2 dest=/etc/fr24feed.ini
+  become: yes
+  tags:
+    - fr24
+    - config
+
+- name: Install fr24feed
+  apt: name=fr24feed state=latest update_cache=true
+  become: yes
+  tags:
+    - fr24
+    - apt
+
+- name: restart fr24 service
+  systemd:
+   state: restarted
+   daemon_reload: yes
+   name: fr24feed
+  become: yes
+  tags:
+    - fr24

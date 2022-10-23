@@ -1,0 +1,12 @@
+---
+# defaults file for fr24
+fr24_key: 
+fr24_sdr_ppm: 0
+fr24_device_index: 0
+fr24_receiver: dvbt
+fr24_proc_args: "--net" # any other arguments to pass
+fr24_bs: yes             # yes/no
+fr24_raw: yes            # yes/no
+fr24_mlat: yes           # yes/no
+fr24_mlat_without_gps: yes  # yes/no
+fr24_logmode: 1         # 0/1/2
