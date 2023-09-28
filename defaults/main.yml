@@ -10,3 +10,4 @@ fr24_raw: yes            # yes/no
 fr24_mlat: yes           # yes/no
 fr24_mlat_without_gps: yes  # yes/no
 fr24_logmode: 1         # 0/1/2
+fr24_feed_host: ""
